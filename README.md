@@ -1,0 +1,2 @@
+# Dedektif
+Ritüel evi 
