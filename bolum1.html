@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Bölüm 1 - Ritüel Şifresi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  background: radial-gradient(circle at top, #300000 0%, #050506 55%, #000000 100%);
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 50, 50, 0.4);
+}
+
+h1 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: #b30000;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+}
+
+#error {
+  text-align: center;
+  margin-top: 10px;
+  color: #ff7777;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>BÖLÜM 1</h1>
+  <p>Eski villanın giriş salonundaki gizemi çöz.  
+  Olay yeri fotoğrafı üzerindeki detaylar şifreyi içeriyor.</p>
+
+  <input id="pass" placeholder="Şifreyi yaz..." autocomplete="off">
+
+  <button onclick="kontrol()">Onayla</button>
+
+  <p id="error"></p>
+</div>
+
+<script>
+function kontrol() {
+  var sifre = document.getElementById("pass").value.trim().toUpperCase();
+
+  if (sifre === "A52F") {  
+    window.location.href = "bolum2.html";
+  } else {
+    document.getElementById("error").textContent = "Yanlış şifre. Tekrar dene.";
+  }
+}
+</script>
+
+</body>
+</html>
