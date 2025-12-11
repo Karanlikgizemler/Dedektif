@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Bölüm 2 - Gölge Mührü</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    background: radial-gradient(circle at top, #1a0000 0%, #030303 40%, #000000 100%);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 420px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid rgba(180, 30, 30, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px;
+    background: #7a0000;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #a00000;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🜂 Bölüm 2: Gölge Mührü</h1>
+
+    <p>Mahzenin daha derinlerine indin.<br>
+    Duvarlarda eski semboller, yerde ise kırık bir kum saati duruyor.<br><br>
+    Kum saatinin alt kısmına kazınmış gizli sayı:<br>
+    <strong>“12’nin yarısı *ritüelin cevabıdır*.”</strong></p>
+
+    <input type="text" id="answer" placeholder="Şifreyi gir...">
+    <button onclick="check()">Onayla</button>
+
+    <p id="result"></p>
+</div>
+
+<script>
+function check() {
+    const answer = document.getElementById("answer").value;
+    const correct = "6";
+
+    if (answer === correct) {
+        window.location.href = "bolum3.html";
+    } else {
+        document.getElementById("result").innerHTML = "❌ Yanlış. Gölge mühür hala kapanmadı.";
+    }
+}
+</script>
+
+</body>
+</html>
